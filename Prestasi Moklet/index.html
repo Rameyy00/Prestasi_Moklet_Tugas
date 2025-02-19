@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi Moklet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function changeVideo(videoUrl) {
+            const iframe = document.getElementById('videoFrame');
+            iframe.src = videoUrl;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white py-3 text-center text-xl font-semibold">
+        Prestasi Moklet
+    </nav>
+
+    <!-- Container utama (Fullscreen) -->
+    <div class="flex flex-1 items-center justify-center p-4">
+        <div class="grid grid-cols-3 gap-4 w-full max-w-7xl">
+            
+            <!-- Video YouTube (Lebih Lebar) -->
+            <div class="col-span-2 flex justify-start pl-4">
+                <iframe id="videoFrame" class="w-full max-w-[2000px] h-[700px] md:h-[800px] rounded-lg shadow-lg" 
+                    src="https://www.youtube.com/embed/EdrU_4K9e6M" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- Daftar Prestasi -->
+            <div class="flex flex-col gap-3">
+                <button onclick="changeVideo('https://www.youtube.com/embed/EdrU_4K9e6M')" class="bg-white text-gray-700 py-3 px-5 rounded-lg shadow-md hover:bg-gray-300">Prestasi 1</button>
+                <button onclick="changeVideo('https://www.youtube.com/embed/PRoSjV9IaNo')" class="bg-white text-gray-700 py-3 px-5 rounded-lg shadow-md hover:bg-gray-300">Prestasi 2</button>
+                <button onclick="changeVideo('https://www.youtube.com/embed/M3XQ_uAymmA')" class="bg-white text-gray-700 py-3 px-5 rounded-lg shadow-md hover:bg-gray-300">Prestasi 3</button>
+                <button onclick="changeVideo('https://www.youtube.com/embed/UwVau7nlWGs')" class="bg-white text-gray-700 py-3 px-5 rounded-lg shadow-md hover:bg-gray-300">Prestasi 4</button>
+                <button onclick="changeVideo('https://www.youtube.com/embed/htblsVlBnqw')" class="bg-white text-gray-700 py-3 px-5 rounded-lg shadow-md hover:bg-gray-300">Prestasi 5</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer dengan Running Text -->
+    <div class="bg-blue-600 text-white py-3 text-center text-lg">
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            🎉 Selamat Datang di Website Prestasi Moklet! 🔥 Lihat berbagai prestasi terbaru dari siswa terbaik kami! 🚀
+        </marquee>
+    </div>
+
+</body>
+</html>
